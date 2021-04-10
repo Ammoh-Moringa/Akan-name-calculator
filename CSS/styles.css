@@ -1,18 +1,25 @@
-body{
+body {
   background-color: rgb(228, 224, 224);
   background-size: cover;
   text-align: center;
 }
-#akan{
+
+#akan {
   background-image: url(../image/black.jpeg);
   background-size: cover;
 }
-p{
+
+p {
   color: goldenrod;
   font-size: large;
   font-family: fantasy;
   font-weight: bolder;
 }
-h1{
+
+h1 {
   color: goldenrod;
+}
+
+#result {
+  display: inline;
 }

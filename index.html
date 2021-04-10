@@ -23,21 +23,25 @@
   <p>Akan names are derived from Ghanian culture.</p></br>
   <p>Fill in the for bellow na you will know your <strong>Akan</strong> name:</p>
           </div>
-  <form>
+  <form class="form" onsubmit="getAkanName()">
     <label for="day">Day:</label>
-    <input type="text" id="day" name="day">
+    <input type="text" id="day" name="day" placeholder="DD" value="" required>
     <label for="month">Month:</label>
-    <input type="text" id="month" name="month">
+    <input type="text" id="month" name="month" placeholder="MM" value="" required>
     <label for="year">Year:</label>
-    <input type="year" id="year" name="year"></br>
+    <input type="year" id="year" name="year" placeholder="YYYY" value=""required></br>
     <p>Enter your Gender:</p>
     <label for="male">Male</label>
-    <input type="radio" id="male" name="gender" value="male">
+    <input type="radio" id="male" name="gender" value="male" required>
     <label for="female">Female</label>
-    <input type="radio" id="female" name="gender" value="female"></br>
-    <button>Submit</button>
-    <button>Reset</button>
+    <input type="radio" id="female" name="gender" value="female" required></br>
+    <input id="get-name" type="submit" name="" value="Generate name">
   </form>
+  <form onsubmit="return clearInput()">
+    <input class="clear" type="submit" value="Clear input">
+  </form>
+  <h2 id=display-result>Your Akan name is:</h2>
+  <p id="result"></p>
   </div>
   </div>
   </div>
