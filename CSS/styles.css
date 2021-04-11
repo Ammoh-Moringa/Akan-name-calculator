@@ -17,9 +17,12 @@ p {
 }
 
 h1 {
-  color: goldenrod;
+  color: white;
 }
 
 #result {
   display: inline;
+}
+#akan img{
+  border-radius: 50%;
 }
