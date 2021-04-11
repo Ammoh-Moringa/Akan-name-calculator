@@ -7,6 +7,9 @@ body {
 #akan {
   background-image: url(../image/black.jpeg);
   background-size: cover;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content:space-around;
 }
 
 p {
@@ -22,7 +25,4 @@ h1 {
 
 #result {
   display: inline;
-}
-#akan img{
-  border-radius: 50%;
 }
