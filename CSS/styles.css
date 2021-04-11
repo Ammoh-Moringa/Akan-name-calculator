@@ -9,7 +9,16 @@ body {
   background-size: cover;
   margin-bottom: 50px;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+#text {
+  text-align: left;
+  flex: 1;
+}
+#img{
+flex: 1;
 }
 
 p {
