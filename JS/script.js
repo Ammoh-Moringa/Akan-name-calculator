@@ -100,7 +100,7 @@ function getAkanName() {
         return false;
         break;
       default:
-        alert("mmh no Akan name for you");
+        alert("invalid!");
 
     }
   } else if (myGenderValue == "female" && monthValid && dayValid) {
@@ -147,9 +147,9 @@ function getAkanName() {
         return false;
         break;
       default:
-        alert("mmh no Akan name for you");
+        alert("invalid!");
     }
   } else {
-    alert("You entered invalid month or day");
+    alert("invalid date or month!");
   }
 }
