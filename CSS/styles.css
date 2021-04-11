@@ -19,8 +19,13 @@ body {
 }
 #img{
 flex: 1;
+height: 100px;
+width: 100px;
 }
-
+#img img{
+  border-radius: 50%;
+  width: ;
+}
 p {
   color: goldenrod;
   font-size: large;
