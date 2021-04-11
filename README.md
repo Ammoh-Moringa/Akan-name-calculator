@@ -19,6 +19,6 @@ To access this project on your local files, you can clone it using these steps
 3. Git
 4. JavaScript
 ### Live Site
-View [live](https://ammoh-moringa.github.io/portfolio-landingpage/)
+View [live](https://ammoh-moringa.github.io/Akan-name-calculator/)
 ### Licence
 This project is under the  [MIT](LICENSE) licence.
