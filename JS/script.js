@@ -1,7 +1,7 @@
 function getAkanName() {
-  let yearOfBirth = document.getElementById("year-input").value;
-  let monthOfBirth = Number(document.getElementById("month-input").value);
-  let dayOfBirth = Number(document.getElementById("day-input").value);
+  let yearOfBirth = parseInt (document.getElementById("year-input").value);
+  let monthOfBirth = parseInt(document.getElementById("month-input").value);
+  let dayOfBirth = parseInt(document.getElementById("day-input").value);
 
   let genders = document.getElementsByName("gender");
 
@@ -34,8 +34,13 @@ function getAkanName() {
   let dayValid = dayValidator();
 
 
-  let dayOfWeekNumber = Math.floor((((Number(yearOfBirth.slice(0, 2)) / 4) - 2 * Number(yearOfBirth.slice(0, 2)) - 1) +
-    ((5 * Number(yearOfBirth.slice(2, 4)) / 4)) + ((26 * (monthOfBirth + 1) / 10)) + dayOfBirth) % 7);
+  // let dayOfWeekNumber = Math.floor((((Number(yearOfBirth.slice(0, 2)) / 4) - 2 * Number(yearOfBirth.slice(0, 2)) - 1) +
+  // ((5 * Number(yearOfBirth.slice(2, 4)) / 4)) + ((26 * (monthOfBirth + 1) / 10)) + dayOfBirth) % 7);
+  if (monthOfBirth < 3) {
+    monthOfBirth += 12;
+    yearOfBirth--;
+}
+let dayOfWeekNumber  = (dayOfBirth + parseInt(((monthOfBirth + 1) * 26) / 10) + yearOfBirth + parseInt(yearOfBirth / 4) + 6 * parseInt(yearOfBirth / 100) + parseInt(yearOfBirth / 400) - 1) % 7;
 
 
   let maleAkanNames = [
@@ -59,43 +64,38 @@ function getAkanName() {
   console.log(myGenderValue);
   if (myGenderValue == "male" && monthValid && dayValid) {
     switch (dayOfWeekNumber) {
-      case 1:
+      case 0:
         document.getElementById('result').textContent = "You were born on a Sunday: your Akan name is " + maleAkanNames[0];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
-      case 2:
+      case 1:
         document.getElementById('result').textContent = "You were born on a Monday: your Akan name is " + maleAkanNames[1];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
-      case 3:
+      case 2:
         document.getElementById('result').textContent = "You were born on a Tuesday: your Akan name is " + maleAkanNames[2];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
-      case 4:
+      case 3:
         document.getElementById('result').textContent = "You were born on a Wednesday: your Akan name is " + maleAkanNames[3];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
-      case 5:
+      case 4:
         document.getElementById('result').textContent = "You were born on a Thursday: your Akan name is " + maleAkanNames[4];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
-      case 6:
+      case 5:
         document.getElementById('result').textContent = "You were born on a Friday: your Akan name is " + maleAkanNames[5];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
-      case 7:
+      case 6:
         document.getElementById('result').textContent = "You were born on a Saturday: your Akan name is " + maleAkanNames[6];
-        document.getElementById('display-name').textContent = "Your Akan name is: ";
-        return false;
-        break;
-      case 0:
-        document.getElementById('result').textContent = "You were born on a Sunday: your Akan name is " + maleAkanNames[0];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
@@ -105,44 +105,39 @@ function getAkanName() {
     }
   } else if (myGenderValue == "female" && monthValid && dayValid) {
     switch (dayOfWeekNumber) {
-      case 1:
+      case 0:
         document.getElementById('result').textContent = "You were born on a Sunday: your Akan name is " + femaleAkanNames[0];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
-      case 2:
+      case 1:
         document.getElementById('result').textContent = "You were born on a Monday: your Akan name is " + femaleAkanNames[1];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
-        alert("Kwadwo");
+
         break;
-      case 3:
+      case 2:
         document.getElementById('result').textContent = "You were born on a Tuesday: your Akan name is " + femaleAkanNames[2];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
-      case 4:
+      case 3:
         document.getElementById('result').textContent = "You were born on a Wednesday: your Akan name is " + femaleAkanNames[3];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
-      case 5:
+      case 4:
         document.getElementById('result').textContent = "You were born on a Thursday: your Akan name is " + femaleAkanNames[4];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
-      case 6:
+      case 5:
         document.getElementById('result').textContent = "You were born on a Friday: your Akan name is " + femaleAkanNames[5];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
-      case 7:
+      case 6:
         document.getElementById('result').textContent = "You were born on a Saturday: your Akan name is " + femaleAkanNames[6];
-        document.getElementById('display-name').textContent = "Your Akan name is: ";
-        return false;
-        break;
-      case 0:
-        document.getElementById('result').textContent = "You were born on a Sunday: your Akan name is " + femaleAkanNames[0];
         document.getElementById('display-name').textContent = "Your Akan name is: ";
         return false;
         break;
