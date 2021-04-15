@@ -44,7 +44,7 @@ let dayOfWeekNumber  = (dayOfBirth + parseInt(((monthOfBirth + 1) * 26) / 10) + 
 
 
   let maleAkanNames = [
-    "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Kwaku", "Yaw", "Kofi", "Kwame"
+    "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"
   ];
 
   let femaleAkanNames = [
